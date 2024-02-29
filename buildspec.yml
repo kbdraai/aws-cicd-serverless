@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "running sam package"
+      - sam package
+        --template-file template.yml
+        --output-template-file package.yml
+        --s3-bucket artifact-bucket-ef887
+        --s3-prefix artifacts
+artifacts:
+  files:
+    - package.yml
