@@ -106,6 +106,7 @@ Resources:
     DependsOn: PipelineBucket
     Properties:
       Name: lambda-python-pipeline
+      PipelineType: V2
       RoleArn: !GetAtt PipelineServiceRole.Arn
       Stages:
         - Name: SourceStage
